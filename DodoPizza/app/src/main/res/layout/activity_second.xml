@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_marginTop="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:background="@drawable/back_button"
+            android:onClick="goBack"
+            />
+        <ImageView
+            android:id="@+id/pizza_image"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            tools:srcCompat = "@drawable/baseline_local_pizza_24"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="35dp">
+        <TextView
+            android:id="@+id/pizza_title"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            tools:text="Name of Pizza"
+            android:layout_marginLeft="3dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="@drawable/data_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pizza_short_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="In this place we have short description about pizza"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="12sp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="3dp"/>
+    <TextView
+        android:id="@+id/pizza_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="In this place we have information about pizza's"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="3dp"/>
+    <TextView
+        android:id="@+id/remove_ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove ingredients"
+        android:layout_marginLeft="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/orange"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/button_Lite"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="2dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:textStyle="bold"
+            android:stateListAnimator="@null"
+            android:text="Lite"
+            android:textColor="@color/black"
+            android:clipToOutline="false"
+
+            />
+
+        <Button
+            android:id="@+id/button_Medium"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Medium"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="2dp"
+            android:stateListAnimator="@null"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:clipToOutline="false"/>
+
+        <Button
+            android:id="@+id/button_High"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="High"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="2dp"
+            android:stateListAnimator="@null"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:clipToOutline="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <Button
+            android:id="@+id/button_Traditional"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Traditional"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="2dp"
+            android:stateListAnimator="@null"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:clipToOutline="false"/>
+
+        <Button
+            android:id="@+id/button_Thin"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Thin"
+            android:textColor="@color/black"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="2dp"
+            android:stateListAnimator="@null"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:clipToOutline="false"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/cost"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:backgroundTint="#FF6E00"
+        android:elevation="4dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        tools:text="Add to cart for 4400KZT"
+        />
+</LinearLayout>

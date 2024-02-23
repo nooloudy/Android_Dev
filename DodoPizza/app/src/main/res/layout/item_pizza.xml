@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/pizza_image"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        tools:srcCompat = "@drawable/baseline_local_pizza_24" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:orientation="vertical"
+        android:textAlignment="center"
+
+        >
+
+        <TextView
+            android:id="@+id/pizza_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            tools:text = "Pepperoni"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <TextView
+            android:id="@+id/pizza_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text = "About type of pizza - Pepperoni"
+            android:layout_marginLeft="3dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            />
+        <Button
+            android:id="@+id/pizza_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:backgroundTint="#F7DFC6"
+            android:elevation="4dp"
+            android:textColor="@color/orange"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="normal"
+            android:layout_marginLeft="30dp"
+            tools:text="KZT" />
+
+    </LinearLayout>
+
+</LinearLayout>
