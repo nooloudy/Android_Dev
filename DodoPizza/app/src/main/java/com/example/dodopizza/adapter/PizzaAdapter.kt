@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dodopizza.databinding.ItemPizzaBinding
 import com.example.dodopizza.models.Pizza
+import com.example.dodopizza.models.PizzaDataSource
 
 class PizzaAdapter(
     private val onPizzaClick: (Pizza) -> Unit
@@ -20,6 +21,18 @@ class PizzaAdapter(
          */
         notifyDataSetChanged()
     }
+    fun filter(query: String) {
+        val filteredList = if (query.isEmpty()) {
+            PizzaDataSource.pizzaList // Показываем все элементы, если строка поиска пуста
+        } else {
+            PizzaDataSource.pizzaList.filter {
+                it.title.contains(query, ignoreCase = true)
+            }
+        }
+        setData(ArrayList(filteredList))
+    }
+
+
     inner class ViewHolder(
         private val binding: ItemPizzaBinding
     ):RecyclerView.ViewHolder(binding.root){

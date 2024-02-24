@@ -64,61 +64,51 @@ class SecondActivity : AppCompatActivity() {
 
         val buttons = listOf(buttonLite, buttonMedium, buttonHigh)
 
+        for (button in buttons){
+            button.setOnClickListener{buttonOnClick(button,buttons)}
+        }
+
         // Устанавливаем белый цвет для buttonMedium по умолчанию
         buttonLite.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
         buttonMedium.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
         buttonHigh.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
 
 
-        buttonLite.setOnClickListener {
-            if (buttonLite.backgroundTintList == ContextCompat.getColorStateList(this, R.color.white)) {
-                buttonLite.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-            } else {
-                buttonLite.backgroundTintList = ContextCompat.getColorStateList(this, R.color.white)
-                buttonMedium.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-                buttonHigh.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-            }
-        }
-
-        buttonMedium.setOnClickListener {
-            if (buttonMedium.backgroundTintList == ContextCompat.getColorStateList(this, R.color.white)) {
-                buttonMedium.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-            } else {
-                buttonLite.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-                buttonMedium.backgroundTintList = ContextCompat.getColorStateList(this, R.color.white)
-                buttonHigh.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-            }
-        }
-
-        buttonHigh.setOnClickListener {
-            if (buttonHigh.backgroundTintList == ContextCompat.getColorStateList(this, R.color.white)) {
-                buttonHigh.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-            } else {
-                buttonLite.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-                buttonMedium.backgroundTintList = ContextCompat.getColorStateList(this, R.color.gray)
-                buttonHigh.backgroundTintList = ContextCompat.getColorStateList(this, R.color.white)
-            }
-        }
 
         buttonTraditional = findViewById(R.id.button_Traditional)
         buttonThin = findViewById(R.id.button_Thin)
 
-        buttonTraditional.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
-        buttonThin.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+        val secondButtons = listOf(buttonThin, buttonTraditional)
 
-        buttonTraditional.setOnClickListener{
-            if (buttonTraditional.backgroundTintList == ContextCompat.getColorStateList(this, R.color.gray)){
-                buttonTraditional.backgroundTintList = ContextCompat.getColorStateList(this, R.color.white)
-                buttonThin.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
-            }
-            else if (buttonThin.backgroundTintList == ContextCompat.getColorStateList(this,R.color.gray)){
-                buttonThin.backgroundTintList = ContextCompat.getColorStateList(this, R.color.white)
-                buttonTraditional.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
-            }
+        for (button in secondButtons){
+            button.setOnClickListener{ buttonOnClick(button, secondButtons)}
         }
 
-
+        buttonTraditional.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+        buttonThin.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
     }
+
+    private fun buttonOnClick(selectedButton: Button, buttons: List<Button>) {
+        if (selectedButton.backgroundTintList == ContextCompat.getColorStateList(this,R.color.gray)){
+            selectedButton.backgroundTintList = ContextCompat.getColorStateList(this,R.color.white)
+            for (b in buttons){
+                if (b == selectedButton){
+                    continue
+                }
+                b.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+            }
+        }
+        else if (selectedButton.backgroundTintList == ContextCompat.getColorStateList(this,R.color.white)){
+            selectedButton.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+            for (b in buttons){
+                if (b == selectedButton){
+                    b.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+                }
+                b.backgroundTintList = ContextCompat.getColorStateList(this,R.color.gray)
+            }
+        }
+    }
+
     fun goBack(view: View) {
         finish()
     }

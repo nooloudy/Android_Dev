@@ -7,7 +7,16 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:padding="16dp">
-
+    
+    <EditText
+        android:id="@+id/pizza_seacrh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:hint="Write pizza name to search" />
+    
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"

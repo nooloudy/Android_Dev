@@ -32,10 +32,10 @@
         android:layout_height="35dp">
         <TextView
             android:id="@+id/pizza_title"
-            android:layout_width="360dp"
+            android:layout_width="358dp"
             android:layout_height="wrap_content"
             tools:text="Name of Pizza"
-            android:layout_marginLeft="3dp"
+            android:layout_marginLeft="5dp"
             android:fontFamily="sans-serif-medium"
             android:textSize="25sp"
             android:textStyle="bold"/>
@@ -55,7 +55,7 @@
         android:fontFamily="sans-serif-medium"
         android:textSize="12sp"
         android:layout_marginBottom="4dp"
-        android:layout_marginLeft="3dp"/>
+        android:layout_marginLeft="5dp"/>
     <TextView
         android:id="@+id/pizza_description"
         android:layout_width="wrap_content"
@@ -64,13 +64,15 @@
         android:fontFamily="sans-serif-medium"
         android:textSize="16sp"
         android:layout_marginBottom="7dp"
-        android:layout_marginLeft="3dp"/>
+        android:layout_marginLeft="5dp"/>
     <TextView
         android:id="@+id/remove_ingredient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Remove ingredients"
-        android:layout_marginLeft="3dp"
+        android:textStyle="italic"
+        android:textSize="17sp"
+        android:layout_marginLeft="5dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/orange"
         android:layout_marginBottom="10dp"/>
