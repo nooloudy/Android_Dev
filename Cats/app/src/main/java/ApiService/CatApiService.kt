@@ -1,4 +1,0 @@
-package ApiService
-
-class CatApiService {
-}

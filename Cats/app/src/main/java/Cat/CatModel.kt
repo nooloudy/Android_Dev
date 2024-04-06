@@ -1,4 +1,0 @@
-package Cat
-
-class CatModel {
-}
